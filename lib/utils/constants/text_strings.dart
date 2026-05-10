@@ -28,7 +28,7 @@ class XTexts {
   static const String xLastName = "Last Name";
   static const String xGetStarted = "Get Started";
   static const String xForgetPassword = "Forget Password?";
-  static const String homeAppbarSubTitle = "Coding With T";
+  static const String homeAppbarSubTitle = "Abhishek Moral";
   static const String xSignInWithGoogle = "Sign-In with Google";
   static const String xOrSignInWith = "Or Sign-In with ";
   static const String xOrSignUpWith = "Or Sign-Up with ";
