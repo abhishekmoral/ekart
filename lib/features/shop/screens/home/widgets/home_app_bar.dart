@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../common/wigets/appbar/appbar.dart';
-import '../../../../common/wigets/products/cart/cart_menu_icon.dart';
-import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/text_strings.dart';
+import '../../../../../common/wigets/appbar/appbar.dart';
+import '../../../../../common/wigets/products/cart/cart_menu_icon.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/text_strings.dart';
 
 class XHomeAppBar extends StatelessWidget {
   const XHomeAppBar({
