@@ -1,4 +1,5 @@
 
+import 'package:ekart/features/shop/screens/store/store.dart';
 import 'package:ekart/utils/constants/colors.dart';
 import 'package:ekart/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
@@ -76,7 +77,7 @@ class NavigationController extends GetxController {
     const HomeScreen(),
 
     /// Store Screen
-    Container(color: Colors.purple),
+    const Store(),
 
     /// Wishlist Screen
     Container(color: Colors.orange),

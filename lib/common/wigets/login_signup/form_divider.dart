@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/text_strings.dart';
+
 import '../../../utils/helpers/helper_function.dart';
 
 class XFormDivider extends StatelessWidget {

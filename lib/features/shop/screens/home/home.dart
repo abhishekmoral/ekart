@@ -1,16 +1,16 @@
+import 'package:ekart/common/wigets/layouts/grid_layout.dart';
+import 'package:ekart/common/wigets/products/product_cards/product_card_vertical.dart';
 import 'package:ekart/features/shop/screens/home/widgets/home_categories.dart';
-import 'package:ekart/utils/constants/text_strings.dart';
-import 'package:ekart/utils/helpers/helper_function.dart';
+import 'package:ekart/features/shop/screens/home/widgets/pomo_slider.dart';
+import 'package:ekart/utils/constants/image_strings.dart';
+
 import 'package:flutter/material.dart';
 import 'package:ekart/features/shop/screens/home/widgets/home_app_bar.dart';
 import 'package:ekart/utils/constants/colors.dart';
 import 'package:ekart/utils/constants/sizes.dart';
-
-import '../../../../common/wigets/Image_text_widgets/vertical_image_texts.dart';
-import '../../../../common/wigets/custom_shapes/constainers/primary_header_container.dart';
-import '../../../../common/wigets/custom_shapes/constainers/search_container.dart';
+import '../../../../common/wigets/custom_shapes/containers/primary_header_container.dart';
+import '../../../../common/wigets/custom_shapes/containers/search_container.dart';
 import '../../../../common/wigets/texts/section_headind.dart';
-import '../../../../utils/constants/image_strings.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -32,17 +32,13 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: XSizes.spaceBtwSections),
 
                   /// Search Bar
-                  const XSearchContainer(
-                    text: "Search in Store",
-                  ),
+                  const XSearchContainer(text: "Search in Store"),
 
                   const SizedBox(height: XSizes.spaceBtwSections),
 
                   /// Categories
                   Padding(
-                    padding: const EdgeInsets.only(
-                      left: XSizes.defaultSpace,
-                    ),
+                    padding: const EdgeInsets.only(left: XSizes.defaultSpace),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -53,14 +49,40 @@ class HomeScreen extends StatelessWidget {
                           textColor: XColors.white,
                         ),
 
-                        const SizedBox(
-                          height: XSizes.spaceBtwItems,
-                        ),
+                        const SizedBox(height: XSizes.spaceBtwItems),
 
                         /// Categories List
-                        XHomeCategories(),
+                        const XHomeCategories(),
                       ],
                     ),
+                  ),
+                ],
+              ),
+            ),
+
+            /// Body
+            Padding(
+              padding: const EdgeInsets.all(XSizes.defaultSpace),
+              child: Column(
+                children: [
+                  /// promo slider
+                  const XPromoSlider(
+                    banners: [
+                      XImages.promoBanner1,
+                      XImages.promoBanner2,
+                      XImages.promoBanner3,
+                    ],
+                  ),
+                  SizedBox(height: XSizes.spaceBtwSections),
+
+                  /// Heading
+                  XSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  const SizedBox(height: XSizes.spaceBtwSections),
+
+                  /// Popular Products
+                  XGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => const XProductCardVertical(),
                   ),
                 ],
               ),
@@ -71,5 +93,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-

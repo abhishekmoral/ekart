@@ -3,7 +3,7 @@ import 'package:ekart/utils/constants/sizes.dart';
 import 'package:ekart/utils/device/device_utility.dart';
 import 'package:ekart/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:iconsax/iconsax.dart';
 import '../../../controllers/onboarding_controller.dart';
 

@@ -76,9 +76,9 @@ class XImages {
       "assets/icons/categories/icons8-smartphone-64.png";
 
   //Banners
-  static const String promoBanner1 = "assets/images/banners/promo-banner-1.png";
-  static const String promoBanner2 = "assets/images/banners/promo-banner-2.png";
-  static const String promoBanner3 = "assets/images/banners/promo-banner-3.png";
+  static const String promoBanner1 = "assets/images/banner/promo-banner-1.png";
+  static const String promoBanner2 = "assets/images/banner/promo-banner-2.png";
+  static const String promoBanner3 = "assets/images/banner/promo-banner-3.png";
   static const String banner2 = "assets/images/banners/banner_2.jpg";
   static const String banner3 = "assets/images/banners/banner_3.jpg";
   static const String banner4 = "assets/images/banners/banner_4.jpg";
@@ -103,7 +103,7 @@ class XImages {
   static const String appleLogo = "assets/icons/brands/apple-logo.png";
 
   // -- Products
-  static const String productImage1 = "assets/images/products/nike-shoes.png";
+  static const String productImage1 = "assets/images/product/leather_jacket_2.png";
   static const String productImage5 =
       "assets/images/products/product-shirt.png";
   static const String productImage7 =
