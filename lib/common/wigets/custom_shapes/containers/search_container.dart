@@ -14,6 +14,7 @@ class XSearchContainer extends StatelessWidget {
     this.showBackground = true,
     this.showBorder = true,
     this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: XSizes.defaultSpace),
   });
 
   final String text;
@@ -21,6 +22,7 @@ class XSearchContainer extends StatelessWidget {
   final bool showBackground;
   final bool showBorder;
   final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -29,42 +31,24 @@ class XSearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: XSizes.defaultSpace,
-        ),
+        padding: padding,
         child: Container(
           width: XDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(XSizes.md),
           decoration: BoxDecoration(
             color: showBackground
-                ? (dark
-                ? XColors.dark
-                : XColors.white)
+                ? (dark ? XColors.dark : XColors.white)
                 : Colors.transparent,
-            borderRadius: BorderRadius.circular(
-              XSizes.cardRadiusLg,
-            ),
-            border: showBorder
-                ? Border.all(color: XColors.grey)
-                : null,
+            borderRadius: BorderRadius.circular(XSizes.cardRadiusLg),
+            border: showBorder ? Border.all(color: XColors.grey) : null,
           ),
           child: Row(
             children: [
-              Icon(
-                icon,
-                color: XColors.darkGrey,
-              ),
+              Icon(icon, color: XColors.darkGrey),
 
-              const SizedBox(
-                width: XSizes.spaceBtwItems,
-              ),
+              const SizedBox(width: XSizes.spaceBtwItems),
 
-              Text(
-                text,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodySmall,
-              ),
+              Text(text, style: Theme.of(context).textTheme.bodySmall),
             ],
           ),
         ),

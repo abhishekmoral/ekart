@@ -1,5 +1,6 @@
 import 'package:ekart/common/wigets/texts/product_price_text.dart';
 import 'package:ekart/common/wigets/texts/product_title_text.dart';
+import 'package:ekart/common/wigets/texts/x_brand_title_text_with_verified_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -10,7 +11,8 @@ import '../../../../utils/helpers/helper_function.dart';
 import '../../../styles/shadows.dart';
 import '../../custom_shapes/containers/Rounded_Container.dart';
 import '../../images/x_rounded_image.dart';
-import '../../icons/x_circular_icon.dart'; // Ensure you import your XCircularIcon here
+import '../../icons/x_circular_icon.dart';
+import '../../texts/x_brand_title_text.dart'; // Ensure you import your XCircularIcon here
 
 class XProductCardVertical extends StatelessWidget {
   const XProductCardVertical({super.key});
@@ -86,26 +88,12 @@ class XProductCardVertical extends StatelessWidget {
                 children: [
                   XProductTitleText(title: 'Jacket is Good', smallSize: true),
                   const SizedBox(height: XSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: XSizes.xs),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: XColors.primary,
-                        size: XSizes.iconXs,
-                      ),
-                    ],
-                  ), // Row
+                  XBrandTitleWithVerifiedIcon(title: "Nike"),
                 ],
               ),
             ),
             Spacer(),
+
             /// Price Row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
